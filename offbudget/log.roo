@@ -64,3 +64,20 @@ field set --class ~.domain.ItemEntity --type ~.domain.ItemAdjustment --fieldName
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-17 22:51:33
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-17 22:52:09
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-17 23:00:07
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-23 18:16:04
+hint
+entity jpa --class ~.domain.ChartingEntity
+field date --fieldName startDate --type java.util.Date
+field date --fieldName endDate --type java.util.Date
+// [failed] field number --type long --fieldName interval
+field number --type long --fieldName day_Interval
+hint
+hint web mvc
+web mvc scaffold --class ~.domain.ChartingEntity
+web mvc scaffold --class ~.domain.ChartingEntity
+web mvc scaffold --class ~.web.ChartingController --backingType ~.domain.ChartingEntity
+web mvc scaffold --class ~.web.ChartingController
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-23 21:08:09
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-23 21:08:45
+hint
+web mvc controller --class ~.web.ChartingController

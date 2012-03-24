@@ -3,6 +3,7 @@
 
 package edu.unlv.kilo.web;
 
+import edu.unlv.kilo.domain.ChartingEntity;
 import edu.unlv.kilo.domain.TransactionDescription;
 import edu.unlv.kilo.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -12,6 +13,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<ChartingEntity, String> ApplicationConversionServiceFactoryBean.getChartingEntityToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<edu.unlv.kilo.domain.ChartingEntity, java.lang.String>() {
+            public String convert(ChartingEntity chartingEntity) {
+                return new StringBuilder().append(chartingEntity.getStartDate()).append(" ").append(chartingEntity.getEndDate()).append(" ").append(chartingEntity.getDay_Interval()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ChartingEntity> ApplicationConversionServiceFactoryBean.getIdToChartingEntityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, edu.unlv.kilo.domain.ChartingEntity>() {
+            public edu.unlv.kilo.domain.ChartingEntity convert(java.lang.Long id) {
+                return ChartingEntity.findChartingEntity(id);
+            }
+        };
+    }
+    
+    public Converter<String, ChartingEntity> ApplicationConversionServiceFactoryBean.getStringToChartingEntityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, edu.unlv.kilo.domain.ChartingEntity>() {
+            public edu.unlv.kilo.domain.ChartingEntity convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ChartingEntity.class);
+            }
+        };
+    }
     
     public Converter<TransactionDescription, String> ApplicationConversionServiceFactoryBean.getTransactionDescriptionToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<edu.unlv.kilo.domain.TransactionDescription, java.lang.String>() {
@@ -38,6 +63,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getChartingEntityToStringConverter());
+        registry.addConverter(getIdToChartingEntityConverter());
+        registry.addConverter(getStringToChartingEntityConverter());
         registry.addConverter(getTransactionDescriptionToStringConverter());
         registry.addConverter(getIdToTransactionDescriptionConverter());
         registry.addConverter(getStringToTransactionDescriptionConverter());
