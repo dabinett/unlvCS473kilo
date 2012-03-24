@@ -9,11 +9,6 @@
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__taggingindex_id" messageCode="global_generic" url="/tagging/index" z="6CENgNay25eDFeG6ZP2gz3iX0eo="/>
-            <menu:item id="i_controller__chartingindex_id" messageCode="global_generic" url="/charting/index" z="ZTTUg+It71zm75UrvyUf2tFLJT8="/>
-        </menu:category>
-        <menu:category id="c_chartingentity" z="SNBfaC7py4ho9s2qSQPZq1zIaYM=">
-            <menu:item id="i_chartingentity_new" messageCode="global_menu_new" url="/chartingentitys?form" z="5pZZ6jif4ebmu8Mu+HqC0Mn7yNM="/>
-            <menu:item id="i_chartingentity_list" messageCode="global_menu_list" url="/chartingentitys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="uUyxokY3zeQktvVBsZ2hh83cOt4="/>
         </menu:category>
     </menu:menu>
 </div>
