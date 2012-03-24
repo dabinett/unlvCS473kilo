@@ -82,3 +82,15 @@ web mvc scaffold --class ~.web.ChartingController
 hint
 web mvc controller --class ~.web.ChartingController
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-23 21:33:30
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-23 21:36:51
+entity jpa --class ~.domain.ChartingEntity
+field date --fieldName startDate --type java.util.Date --notNull
+field date --fieldName endDate --type java.util.Date --notNull
+field number --fieldName day_Interval --type long --notNull --min 1
+web mvc controller --class ~.web.ChartingController
+web mvc scaffold --class ~.web.ChartingForm --backingType ~.domain.ChartingEntity
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-23 21:56:55
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-23 21:58:58
+hi
+hint topics
+hint eclipse
