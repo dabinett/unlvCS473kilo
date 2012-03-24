@@ -25,6 +25,7 @@
 
 # Logs and databases #
 ######################
+*.roo
 *.log
 *.sql
 *.sqlite

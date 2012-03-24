@@ -81,3 +81,4 @@ web mvc scaffold --class ~.web.ChartingController
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-23 21:08:45
 hint
 web mvc controller --class ~.web.ChartingController
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-23 21:33:30
