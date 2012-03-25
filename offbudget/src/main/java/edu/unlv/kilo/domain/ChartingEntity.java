@@ -1,5 +1,6 @@
 package edu.unlv.kilo.domain;
 
+import java.util.Calendar;
 import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,16 +17,16 @@ import org.springframework.roo.addon.tostring.RooToString;
 public class ChartingEntity {
 
     @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date startDate;
-
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date endDate;
-
-    @NotNull
     @Min(1L)
     private long day_Interval;
+
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Calendar startDate;
+
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Calendar endDate;
 }

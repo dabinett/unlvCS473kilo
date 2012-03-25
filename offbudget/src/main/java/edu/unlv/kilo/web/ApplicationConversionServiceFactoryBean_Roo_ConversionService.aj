@@ -17,7 +17,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<ChartingEntity, String> ApplicationConversionServiceFactoryBean.getChartingEntityToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<edu.unlv.kilo.domain.ChartingEntity, java.lang.String>() {
             public String convert(ChartingEntity chartingEntity) {
-                return new StringBuilder().append(chartingEntity.getStartDate()).append(" ").append(chartingEntity.getEndDate()).append(" ").append(chartingEntity.getDay_Interval()).toString();
+                return new StringBuilder().append(chartingEntity.getDay_Interval()).append(" ").append(chartingEntity.getStartDate()).append(" ").append(chartingEntity.getEndDate()).toString();
             }
         };
     }

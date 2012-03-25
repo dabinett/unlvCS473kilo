@@ -4,25 +4,9 @@
 package edu.unlv.kilo.domain;
 
 import edu.unlv.kilo.domain.ChartingEntity;
-import java.util.Date;
+import java.util.Calendar;
 
 privileged aspect ChartingEntity_Roo_JavaBean {
-    
-    public Date ChartingEntity.getStartDate() {
-        return this.startDate;
-    }
-    
-    public void ChartingEntity.setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-    
-    public Date ChartingEntity.getEndDate() {
-        return this.endDate;
-    }
-    
-    public void ChartingEntity.setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
     
     public long ChartingEntity.getDay_Interval() {
         return this.day_Interval;
@@ -30,6 +14,22 @@ privileged aspect ChartingEntity_Roo_JavaBean {
     
     public void ChartingEntity.setDay_Interval(long day_Interval) {
         this.day_Interval = day_Interval;
+    }
+    
+    public Calendar ChartingEntity.getStartDate() {
+        return this.startDate;
+    }
+    
+    public void ChartingEntity.setStartDate(Calendar startDate) {
+        this.startDate = startDate;
+    }
+    
+    public Calendar ChartingEntity.getEndDate() {
+        return this.endDate;
+    }
+    
+    public void ChartingEntity.setEndDate(Calendar endDate) {
+        this.endDate = endDate;
     }
     
 }

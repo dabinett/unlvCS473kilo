@@ -94,3 +94,6 @@ web mvc scaffold --class ~.web.ChartingForm --backingType ~.domain.ChartingEntit
 hi
 hint topics
 hint eclipse
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-24 18:26:16
+field date --class ~.domain.ChartingEntity --fieldName startDate --type java.util.Calendar
+field date --class ~.domain.ChartingEntity --fieldName endDate --type java.util.Calendar
