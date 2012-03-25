@@ -17,7 +17,7 @@ public class ItemAdjustment {
 	 * A user-friendly name for this adjustment. Not necessarily unique.
 	 */
     private String description;
-
+    
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     /**

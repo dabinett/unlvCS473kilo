@@ -1,37 +1,57 @@
 package edu.unlv.kilo.web;
 
-import java.util.Date;
+import java.util.Calendar;
 
-import edu.unlv.kilo.domain.ChartingEntity;
-import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
-@RequestMapping("/chartingentitys")
-@Controller
-@RooWebScaffold(path = "chartingentitys", formBackingObject = ChartingEntity.class)
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class ChartingForm 
 {
-	private Date start;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+	private Calendar startDate;
 	
-	private Date end;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+	private Calendar endDate;
 	
-	private long day_Interval;
-	
-	public void setStart(Date start)
+	@NotNull
+	@Min(1L)
+	private int day_Interval;
+
+	public Calendar getStartDate() 
 	{
-		this.start = start;
+		return startDate;
 	}
-	
-	public void setEnd(Date end)
+
+	public void setStartDate(Calendar startDate) 
 	{
-		this.end = end;
+		this.startDate = startDate;
 	}
-	
-	public void setInterval(long interval)
+
+	public Calendar getEndDate() 
 	{
-		day_Interval = interval;
+		return endDate;
+	}
+
+	public void setEndDate(Calendar endDate) 
+	{
+		this.endDate = endDate;
+	}
+
+	public int getDay_Interval() 
+	{
+		return day_Interval;
+	}
+
+	public void setDay_Interval(int day_Interval) 
+	{
+		this.day_Interval = day_Interval;
 	}
 }
-
