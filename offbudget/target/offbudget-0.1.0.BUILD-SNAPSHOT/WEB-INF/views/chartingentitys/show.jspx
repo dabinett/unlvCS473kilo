@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_edu_unlv_kilo_domain_ChartingEntity" object="${chartingentity}" path="/chartingentitys" z="4zbZaD8PL5TThkStoJhUZA81R6A=">
+        <field:display field="day_Interval" id="s_edu_unlv_kilo_domain_ChartingEntity_day_Interval" object="${chartingentity}" z="z0ItAo/Bf3aflP56UqJjzLC3/nY="/>
+        <field:display calendar="true" dateTimePattern="${chartingEntity_startdate_date_format}" field="startDate" id="s_edu_unlv_kilo_domain_ChartingEntity_startDate" object="${chartingentity}" z="57NVMUgF9UfokK0zsIi9qegDlro="/>
+        <field:display calendar="true" dateTimePattern="${chartingEntity_enddate_date_format}" field="endDate" id="s_edu_unlv_kilo_domain_ChartingEntity_endDate" object="${chartingentity}" z="JSoVz8JkrgSRDriWkPG30XMioLA="/>
+    </page:show>
+</div>

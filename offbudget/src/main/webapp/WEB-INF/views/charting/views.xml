@@ -4,4 +4,7 @@
     <definition extends="default" name="charting/index">
         <put-attribute name="body" value="/WEB-INF/views/charting/index.jspx"/>
     </definition>
+    <definition extends="default" name="charting/graph">
+    	<put-attribute name="body" value="/WEB-INF/views/charting/graph.jspx"/>
+    </definition>
 </tiles-definitions>

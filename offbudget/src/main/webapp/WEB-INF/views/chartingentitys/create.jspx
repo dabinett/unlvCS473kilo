@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_edu_unlv_kilo_domain_ChartingEntity" modelAttribute="chartingEntity" path="/chartingentitys" render="${empty dependencies}" z="PGOh9oiwBXxYRuW+9bHspFRpfB0=">
+        <field:input field="day_Interval" id="c_edu_unlv_kilo_domain_ChartingEntity_day_Interval" min="1" required="true" z="2NORtVkwLg70TicjzqdULpivYII="/>
+        <field:datetime dateTimePattern="${chartingEntity_startdate_date_format}" field="startDate" id="c_edu_unlv_kilo_domain_ChartingEntity_startDate" z="ilx6e7hxau5jBYDQl18NgNlU3qo="/>
+        <field:datetime dateTimePattern="${chartingEntity_enddate_date_format}" field="endDate" id="c_edu_unlv_kilo_domain_ChartingEntity_endDate" z="/olj8MaBno1VBi1kYbQwiXbxyIc="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_edu_unlv_kilo_domain_ChartingEntity" render="${not empty dependencies}" z="oNMDerPhtcqDT+/PTWG8R3EMNR4="/>
+</div>

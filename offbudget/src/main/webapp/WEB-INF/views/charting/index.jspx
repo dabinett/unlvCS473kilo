@@ -13,7 +13,7 @@
           <spring:message code="charting_form_interval_label" />
         </label>
         <input id="day_Interval" type='text' name='day_Interval' style="width:150px" />
-        <spring:message code="charting_form_interval_messagee" var="interval_msg" htmlEscape="false" />
+        <spring:message code="charting_form_interval_message" var="interval_msg" htmlEscape="false" />
         <script type="text/javascript">
           <c:set var="charting_interval_msg">
             <spring:escapeBody javaScriptEscape="true">${interval_msg}</spring:escapeBody>
@@ -24,49 +24,35 @@
       </div>
       <br/>
       <div>
-        <label for="signup_form_email_label">
-          <spring:message code="signup_form_email_label" />
+        <label for="charting_form_start_date_label">
+          <spring:message code="charting_form_start_date_label" />
         </label>
-        <input id="emailAddress" type='text' name='emailAddress' style="width:150px" />
-        <spring:message code="signup_form_email_message" var="email_msg" htmlEscape="false" />
+        <input id="startDate" type="date" name='startDate' style="width:150px" />
+        <spring:message code="charting_form_start_date_message" var="start_date_msg" htmlEscape="false" />
         <script type="text/javascript">
-          <c:set var="signup_email_msg">
-            <spring:escapeBody javaScriptEscape="true">${email_msg}</spring:escapeBody>
+          <c:set var="charting_start_date_msg">
+            <spring:escapeBody javaScriptEscape="true">${start_date_msg}</spring:escapeBody>
           </c:set>
-          Spring.addDecoration(new Spring.ElementDecoration({elementId : "emailAddress", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${signup_email_msg}", required : true}})); 
+          Spring.addDecoration(new Spring.ElementDecoration({elementId : "startDate", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${charting_start_date_msg}", required : true}})); 
         </script>
-        <form:errors cssClass="errors" path="emailAddress"/>
+        <form:errors cssClass="errors" path="startDate"/>
       </div>
       <br/>
       <div>
-        <label for="signup_form_password_label">
-          <spring:message code="signup_form_password_label" />
+        <label for="charting_form_end_date_label">
+          <spring:message code="charting_form_end_date_label" />
         </label>
-        <input id="password" type='password' name='password' style="width:150px" />
-        <spring:message code="signup_form_password_message" var="password_msg" htmlEscape="false" />
+        <input id="endDate" type='date' name='endDate' style="width:150px" />
+        <spring:message code="charting_form_end_date_message" var="end_date_msg" htmlEscape="false" />
         <script type="text/javascript">
-          <c:set var="signup_password_msg">
-            <spring:escapeBody javaScriptEscape="true">${password_msg}</spring:escapeBody>
+          <c:set var="charting_end_date_msg">
+            <spring:escapeBody javaScriptEscape="true">${end_date_msg}</spring:escapeBody>
           </c:set>
-          Spring.addDecoration(new Spring.ElementDecoration({elementId : "password", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${signup_password_msg}", required : true}})); 
+          Spring.addDecoration(new Spring.ElementDecoration({elementId : "endDate", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${charting_end_date_msg}", required : true}})); 
         </script>
-        <form:errors cssClass="errors" path="password"/>
+        <form:errors cssClass="errors" path="endDate"/>
       </div>
       <br/>
-      <div>
-        <label for="signup_form_passwordrepeat_label">
-          <spring:message code="signup_form_passwordrepeat_label" />
-        </label>
-        <input id="passwordRepeat" type='password' name='passwordRepeat' style="width:150px" />
-        <spring:message code="signup_form_passwordrepeat_message" var="passwordrepeat_msg" htmlEscape="false" />
-        <script type="text/javascript">
-          <c:set var="signup_passwordrepeat_msg">
-            <spring:escapeBody javaScriptEscape="true">${passwordrepeat_msg}</spring:escapeBody>
-          </c:set>
-          Spring.addDecoration(new Spring.ElementDecoration({elementId : "passwordRepeat", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${signup_passwordrepeat_msg}", required : true}})); 
-        </script>
-        <form:errors cssClass="errors" path="passwordRepeat"/>
-      </div>
       <br/><br/>
       <div class="submit">
         <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId: 'proceed', event : 'onclick'}));</script>

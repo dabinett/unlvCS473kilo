@@ -107,3 +107,19 @@ hint web mvc
 web mvc controller --class ~.web.ChartingController
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-24 22:59:22
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-24 22:59:54
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-25 15:46:11
+hi
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-25 17:26:31
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-25 17:33:52
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-25 17:34:40
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-25 18:27:37
+// [failed] perform clean 
+// [failed] perform package
+// [failed] perform clean
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-25 18:30:31
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-25 18:31:44
+// [failed] perform clean
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-25 18:32:05
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-25 18:49:38
+perform clean
+perform package
